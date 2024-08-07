@@ -1,0 +1,134 @@
+class dummyMainClass
+{
+
+    public static void dummyMainMethod(java.lang.String[])
+    {
+        int $i0;
+        java.lang.String[] $r0;
+
+        $r0 := @parameter0: java.lang.String[];
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label2;
+
+        staticinvoke <dummyMainClass: de.ecspride.MainActivity dummyMainMethod_de_ecspride_MainActivity(android.content.Intent)>(null);
+
+        if $i0 == 1 goto label1;
+
+     label2:
+        if $i0 == 2 goto label1;
+
+        return;
+    }
+
+    public static de.ecspride.MainActivity$PlaceholderFragment dummyMainMethod_de_ecspride_MainActivity$PlaceholderFragment(android.content.Intent, android.app.Activity)
+    {
+        int $i0;
+        android.view.View $r2;
+        android.content.Intent parameter0;
+        de.ecspride.MainActivity$PlaceholderFragment $r0;
+        android.app.Activity parameter1;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        parameter1 := @parameter1: android.app.Activity;
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label5;
+
+        $r0 = new de.ecspride.MainActivity$PlaceholderFragment;
+
+        specialinvoke $r0.<de.ecspride.MainActivity$PlaceholderFragment: void <init>()>();
+
+        $r0.<de.ecspride.MainActivity$PlaceholderFragment: android.content.Intent ipcIntent_0> = parameter0;
+
+        if $i0 == 2 goto label4;
+
+     label2:
+        virtualinvoke $r0.<de.ecspride.MainActivity$PlaceholderFragment: android.view.View onCreateView(android.view.LayoutInflater,android.view.ViewGroup,android.os.Bundle)>(null, null, null);
+
+     label3:
+        $r2 = new android.view.View;
+
+        specialinvoke $r2.<android.view.View: void <init>(android.content.Context)>(null);
+
+        if $i0 == 3 goto label3;
+
+        if $i0 == 4 goto label2;
+
+        if $i0 == 5 goto label3;
+
+        if $i0 == 6 goto label2;
+
+        if $i0 == 7 goto label2;
+
+        $r0 = null;
+
+     label4:
+        if $i0 == 8 goto label1;
+
+     label5:
+        return $r0;
+    }
+
+    public static de.ecspride.MainActivity dummyMainMethod_de_ecspride_MainActivity(android.content.Intent)
+    {
+        int $i0;
+        de.ecspride.MainActivity $r0;
+        android.view.View $r1;
+        android.content.Intent parameter0;
+
+        parameter0 := @parameter0: android.content.Intent;
+
+        $i0 = 0;
+
+     label1:
+        if $i0 == 0 goto label7;
+
+        $r0 = new de.ecspride.MainActivity;
+
+        specialinvoke $r0.<de.ecspride.MainActivity: void <init>()>();
+
+        $r0.<de.ecspride.MainActivity: android.content.Intent ipcIntent> = parameter0;
+
+        virtualinvoke $r0.<de.ecspride.MainActivity: void onCreate(android.os.Bundle)>(null);
+
+        staticinvoke <dummyMainClass: de.ecspride.MainActivity$PlaceholderFragment dummyMainMethod_de_ecspride_MainActivity$PlaceholderFragment(android.content.Intent,android.app.Activity)>(parameter0, $r0);
+
+     label2:
+        if $i0 == 2 goto label6;
+
+        $r1 = new android.view.View;
+
+        specialinvoke $r1.<android.view.View: void <init>(android.content.Context)>(null);
+
+     label3:
+        if $i0 == 3 goto label4;
+
+        virtualinvoke $r0.<de.ecspride.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>(null);
+
+     label4:
+        if $i0 == 4 goto label5;
+
+        virtualinvoke $r0.<de.ecspride.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null);
+
+     label5:
+        if $i0 == 5 goto label3;
+
+     label6:
+        if $i0 == 6 goto label2;
+
+        if $i0 == 7 goto label2;
+
+        if $i0 != 8 goto label2;
+
+        if $i0 == 9 goto label1;
+
+     label7:
+        return $r0;
+    }
+}
