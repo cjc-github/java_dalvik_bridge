@@ -11,8 +11,8 @@ if __name__ == '__main__':
     parser.add_argument("--so", "-so", default="soot_out", help="output dir.")
     args = parser.parse_args()
 
-    # cdm = CountDalvikMethods(args.i, args.ao)
-    # cdm.report()
+    cdm = CountDalvikMethods(args.i, args.ao)
+    cdm.report()
 
     cjm = CountJavaMethods(args.i, args.so)
     cjm.report()

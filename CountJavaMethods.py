@@ -22,6 +22,7 @@ class CountJavaMethods:
             if os.path.exists(output):
                 print(f"Has been decompile the apk: {apk_path}.")
             else:
+                os.makedirs(output)
                 cmd = f"cd {self.soot_out}; java -jar ../lib/soot-infoflow-cmd-2.13.0-jar-with-dependencies.jar -a " + \
                       os.path.abspath(apk_path) + " -p ../lib/android.jar -s ../lib/SourcesAndSinks.txt -wj sootOutput"
                 os.system(cmd)
@@ -34,9 +35,12 @@ class CountJavaMethods:
                 with open(jimple_path, "r") as f:
                     lines = f.readlines()
                     for line in lines:
-                        if "invoke" in line:
-                            method = line.split("<", 1)[1].rsplit(">", 1)[0]
-                            method_set.add(f"<{method}>\n")
+                        if "invoke " in line:
+                            try:
+                                method = line.split("<", 1)[1].split(")>", 1)[0]
+                                method_set.add(f"<{method})>\n")
+                            except Exception as e:
+                                pass
 
             # [3] save the method
             with open("java_method.txt", "a") as f:
